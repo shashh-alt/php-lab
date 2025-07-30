@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>traingle</title>
+    <script>
+        let a = parseFloat(prompt("enter the first side"));
+        let b = parseFloat(prompt("enter the second side"));
+        let c = parseFloat(prompt("enter the third side"));
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert("please enter a number");
+        } else {
+            if (a + b > c && a + c > b && b + c > a) {
+                let type;
+                if (a == b && b == c) {
+                    type = "equilateral";
+                } else if (a == b || b == c || a == c) {
+                    type = "isosceles";
+                } else {
+                    type = "scalene";
+                }
+
+                let s = (a + b + c) / 2;
+                let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+                alert("this is a " + type + " traingle.\nArea: " + area.toFixed(2));
+            } else {
+                alert("eth traingle alla pokko");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
