@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>docu</title>
+    <script>
+        window.onload = function () {
+            var num1El = document.getElementById("num1");
+            var num2El = document.getElementById("num2");
+            var resultEl = document.getElementById("result");
+
+            var add = document.getElementById("add");
+            var sub = document.getElementById("sub");
+            var mult = document.getElementById("mult");
+            var div = document.getElementById("div");
+
+            add.onclick = function () {
+                var num1 = parseFloat(num1El.value);
+                var num2 = parseFloat(num2El.value);
+                resultEl.value = num1 + num2;
+            };
+
+            sub.onclick = function () {
+                var num1 = parseFloat(num1El.value);
+                var num2 = parseFloat(num2El.value);
+                resultEl.value = num1 - num2;
+            };
+
+            mult.onclick = function () {
+                var num1 = parseFloat(num1El.value);
+                var num2 = parseFloat(num2El.value);
+                resultEl.value = num1 * num2;
+            };
+
+            div.onclick = function () {
+                var num1 = parseFloat(num1El.value);
+                var num2 = parseFloat(num2El.value);
+                if (num2 === 0) {
+                    resultEl.value = "Cannot divide by 0";
+                } else {
+                    resultEl.value = num1 / num2;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1><i><center><marquee>CALCULATOR</marquee></i></h1></center>
+    <center>
+        <input type="number" id="num1" placeholder="enter your  first number:"><br><br>
+        <input type="number" id="num2" placeholder="enter your second number:"><br><br>
+        <input type="number" id="result" placeholder="utharam inna"><br><br>
+        <button id="add" value="add">add</button>
+        <button id="sub" value="sub">sub</button>
+        <button id="mult" value="mult">mult</button>
+        <button id="div" value="div">div</button>
+    </center>
+</body>
+</html>
