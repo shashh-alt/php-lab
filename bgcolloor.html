@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>Background Color Changer</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'verdana , sans-serif';
+      padding: 50px;
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Background Color Changer</h1>
+  <button id="changeColorBtn">colour mattooooooo</button>
+
+  <script>
+    const colors = ['red', 'green', 'blue', 'orange', 'purple', 'yellow', 'pink', '#00FFFF', '#FF00FF'];
+
+    let index = 0;
+
+    const button = document.getElementById('changeColorBtn');
+
+    button.addEventListener('click', () => {
+      document.body.style.backgroundColor = colors[index];
+
+      index = (index + 1) % colors.length; 
+    });
+  </script>
+
+</body>
+</html>
